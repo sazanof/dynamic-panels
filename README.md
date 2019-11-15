@@ -10,17 +10,26 @@ Or you can just download the repo using Git
 ```
 <script src="path/to/polyfills.js"></script>
 <script src="path/to/dynamic-panels.js"></script>
-<!-- or just
-<script src="path/to/dynamic-panels-w-pollyfill.js"></script>
--->
 ```
 
 # Usage / Использование
 ```
 <script>
     window.addEventListener('DOMContentLoaded',function () {
-        DynamicPanels.init('example1','details');
-        DynamicPanels.init('example2','dd');
+        var ex1 = new DynamicPanels({
+            id:'example1',
+            name_key:'details'
+        }).init();
+        var ex2 = new DynamicPanels({
+            id: 'example2',
+            name_key: 'dd',
+            classes: {
+                inner :'.custom_dp_class',
+                header : '.custom_dp_class-header',
+                title : '.custom_dp_class-title',
+                actions : '.custom_dp_class-actions'
+            }
+        }).init();
     })
 </script>
 ```
