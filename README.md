@@ -44,8 +44,8 @@ If you want to use it, just include the **pollyfills.js** in you project, or use
 Можете использовать **pollyfills.js** в проекте или же просто подключить **dynamic-panels-w-polyfill.js**
 
 # HTML structure / Структура HTML кода
-Required html attributes  in child element block
-Обязательные атрибуты элементов
+Required html attributes  in child element block.
+Обязательные атрибуты элементов:
  ```
  <div id="example1"> <!--ID of element-- >
      <div class="dynamic" data-pos="1"> <!-- basic class and data-pos=1 -- >
