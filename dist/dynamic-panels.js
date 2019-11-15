@@ -67,9 +67,9 @@ function DynamicPanels(options){
     };
     this.deletePanel = function (el) {
         el.remove();
-        this.updateData();
+        this.updateData(true);
     };
-    this.updateData = function () {
+    this.updateData = function (AD) {
         var childs = this.countPanels();
         var self = this;
         childs.forEach(function (el,i) {
@@ -77,7 +77,13 @@ function DynamicPanels(options){
             el.querySelector(self.classes.header + ' span').innerText = (i + 1);
             el.dataset.pos = (i + 1);
             elms.forEach(function (ist) {
-                ist.name = ist.name.replace('[' + i + ']','[' + el.dataset.pos + ']');
+                if (AD){
+                    console.log(el.dataset.pos,i,ist.name);
+                    ist.name = ist.name.replace('['+ (parseInt(el.dataset.pos) + 1) +']','[' + el.dataset.pos + ']');
+                }
+                else{
+                    ist.name = ist.name.replace('['+ i +']','[' + el.dataset.pos  + ']');
+                }
             });
         });
 
