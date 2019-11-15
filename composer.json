@@ -1,0 +1,13 @@
+{
+    "name": "sazanof/dynamic-panels",
+    "description": "Pure JavaScript addon for dynamically adding and removing html blocks with form elements and preparing for the subsequent sending of structured data to the server",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Sazanof",
+            "email": "sazanof.ru@yandex.ru"
+        }
+    ],
+    "require": {}
+}

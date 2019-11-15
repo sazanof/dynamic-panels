@@ -1,0 +1,6 @@
+/* COMMON STYLES FOR DEMO*/
+.wrap {display:flex;flex-wrap: wrap}
+.wrap section {width: 50%;padding: 2rem;box-sizing: border-box}
+.dynamic {padding:1rem;box-sizing: border-box;border:0.06rem solid #ddd}
+input[type="text"],select,textarea {display:block;padding:0.4rem;box-sizing: border-box;margin: 0.3rem 0;border:0.06rem solid #ccc;width: 100%}
+.btn {padding:0.2rem 0.4rem;background: #333;color:#fff;margin: 0.4rem 0;display:inline-block}

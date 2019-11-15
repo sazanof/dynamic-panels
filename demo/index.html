@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset=utf-8 />
+    <title>Dynamic Panels</title>
+    <link rel="stylesheet" href="../assets/style.css">
+</head>
+<body>
+
+<div class="wrap">
+    <section>
+        <h2>Example #1</h2>
+        <div id="example1">
+            <div class="form-group dynamic" data-pos="1">
+                <div class="dynamic-header">
+                    <div class="dynamic-title">
+                        Position #<span>1</span>
+                    </div>
+                    <div class="dynamic-actions">
+                        <span class="btn" data-plus>+</span>
+                        <span class="btn" data-minus>-</span>
+                    </div>
+                </div>
+                <div class="form-group-inner">
+                    <label>Title</label>
+                    <input type="text" name="details[1][title]">
+                </div>
+                <div class="form-group-inner">
+                    <label>Option</label>
+                    <input type="text" name="details[1][option]">
+                </div>
+                <div class="form-group-inner">
+                    <label>Photo</label>
+                    <input type="file" name="photos[]">
+                </div>
+            </div>
+        </div>
+    </section>
+    <section>
+        <h2>Example #2</h2>
+        <div id="example2">
+            <div class="dynamic" data-pos="1">
+                <div class="dynamic-header">
+                    <div class="dynamic-title">
+                        Element #<span>1</span>
+                    </div>
+                    <div class="dynamic-actions">
+                        <button type="button" data-plus>+</button>
+                        <button type="button" data-minus>-</button>
+                    </div>
+                </div>
+                <div class="form-group-inner">
+                    <label>Text</label>
+                    <textarea name="dd[1][text]"></textarea>
+                </div>
+                <div class="form-group-inner">
+                    <label>Select</label>
+                    <select name="dd[1][description]">
+                        <option>--</option>
+                        <option value="1">One</option>
+                        <option value="">Two</option>
+                    </select>
+                </div>
+                <div class="form-group-inner">
+                    <label>Check</label>
+                    <input type="checkbox" value="1" name="dd[1][check]">
+                </div>
+                <div class="form-group-inner">
+                    <label>Radio</label>
+                    <input type="radio" value="1" name="dd[1][radio]">
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+<script src="../assets/polyfills.js"></script>
+<script src="../dist/dynamic-panels.js"></script>
+<!-- or just
+<script src="../dist/dynamic-panels-w-pollyfill.js"></script>
+-->
+<script>
+    window.addEventListener('DOMContentLoaded',function () {
+        DynamicPanels.init('example1','details');
+        DynamicPanels.init('example2','dd');
+    })
+</script>
+
+</body>
+</html>
