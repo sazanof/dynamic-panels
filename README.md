@@ -43,5 +43,25 @@ If you want to use it, just include the **pollyfills.js** in you project, or use
 Некоторые браузеры (например Internet Explorer) не понимают **forEach**, **closest**, **match**.
 Можете использовать **pollyfills.js** в проекте или же просто подключить **dynamic-panels-w-polyfill.js**
 
-#HTML structure / Структура HTML кода
+# HTML structure / Структура HTML кода
 Required html attributes  in child element block
+Обязательные атрибуты элементов
+ ```
+ <div id="example1"> <!--ID of element-- >
+     <div class="dynamic" data-pos="1"> <!-- basic class and data-pos=1 -- >
+         <div class="dynamic-header"><!-- basic class -- >
+             <div class="dynamic-title"><!-- basic class -- >
+                 Position #<span>1</span><!-- span required! -- >
+             </div>
+             <div class="dynamic-actions"><!-- basic class -- >
+                 <span class="btn" data-plus>+</span><!-- data-plus -- >
+                 <span class="btn" data-minus>-</span><!-- data-plus -- >
+             </div>
+         </div>
+         <div class="form-group-inner">
+             <input type="text" name="details[1][title]"><!-- name like this -- >
+         </div>
+     </div>
+ </div>
+ ```
+Name structure like name_key - **details**[**1** - basic number][**title** - your subkey]
