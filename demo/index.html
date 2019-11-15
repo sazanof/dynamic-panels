@@ -39,12 +39,12 @@
     <section>
         <h2>Example #2</h2>
         <div id="example2">
-            <div class="dynamic" data-pos="1">
-                <div class="dynamic-header">
-                    <div class="dynamic-title">
+            <div class="custom_dp_class" data-pos="1">
+                <div class="custom_dp_class-header">
+                    <div class="custom_dp_class-title">
                         Element #<span>1</span>
                     </div>
-                    <div class="dynamic-actions">
+                    <div class="custom_dp_class-actions">
                         <button type="button" data-plus>+</button>
                         <button type="button" data-minus>-</button>
                     </div>
@@ -75,13 +75,22 @@
 </div>
 <script src="../assets/polyfills.js"></script>
 <script src="../dist/dynamic-panels.js"></script>
-<!-- or just
-<script src="../dist/dynamic-panels-w-pollyfill.js"></script>
--->
 <script>
     window.addEventListener('DOMContentLoaded',function () {
-        DynamicPanels.init('example1','details');
-        DynamicPanels.init('example2','dd');
+        var ex1 = new DynamicPanels({
+            id:'example1',
+            name_key:'details'
+        }).init();
+        var ex2 = new DynamicPanels({
+            id: 'example2',
+            name_key: 'dd',
+            classes: {
+                inner :'.custom_dp_class',
+                header : '.custom_dp_class-header',
+                title : '.custom_dp_class-title',
+                actions : '.custom_dp_class-actions'
+            }
+        }).init();
     })
 </script>
 
