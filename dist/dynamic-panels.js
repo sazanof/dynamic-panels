@@ -23,7 +23,7 @@ function DynamicPanels(options){
                 }
             }
         }
-    }
+    };
     this.init = function(){
         if(options){
             this.mergeOptions(options,this);
@@ -32,6 +32,7 @@ function DynamicPanels(options){
     };
     this.render = function () {
         this.el = document.getElementById(this.id);
+        if (!this.el) return false;
         this.plus = this.classes.actions + ' *[data-plus]';
         this.minus = this.classes.actions + ' *[data-minus]';
         this.registerEvents();
